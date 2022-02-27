@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Hero from "../Components/Home/Hero";
 import WhyPeople from "../Components/Home/WhyPeople";
+import Pricings from "../Components/Pricings";
 import Svgs from "../Components/Svgs";
 import Theme1 from "../Themes/Theme1";
 
 export default function index({ data }) {
-  const { home: { hero, model, dynamic, company, ready, whypeople } } = data;
+  const { home: { hero, model, dynamic, company, ready, whypeople, pricings } } = data;
   return (
     <>
       <Head>
@@ -59,7 +60,11 @@ export default function index({ data }) {
           ifJustifyEnd
           ifColumnReverse
         />
-        
+        <Pricings 
+          title={pricings?.title}
+          subTitle={pricings?.subtitle}
+          plans={pricings?.plans}
+        />
       </section>
     </>
   );

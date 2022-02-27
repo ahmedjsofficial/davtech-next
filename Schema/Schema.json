@@ -49,6 +49,27 @@
           "description": "Davuptech is the no 1 trustworthy company, all our products and services are secured and we also develop to make our customers satisfied and happy."
         }
       }
+    },
+    "pricings": {
+      "subtitle": "Why We Most Popular",
+      "title": "Our Pricings",
+      "plans": {
+        "membership": {
+          "title": "MEMBERSHIP",
+          "duration": "share membership, per month, billed monthly",
+          "price": "2000"
+        },
+        "dedicated": {
+          "title": "DEDICATED",
+          "duration": "per member, per month, billed monthly",
+          "price": "3000"
+        },
+        "private": {
+          "title": "PRIVATE",
+          "duration": "per team, per month, billed monthly",
+          "price": "5000"
+        }
+      }
     }
   }
 }

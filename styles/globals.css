@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Encode Sans", sans-serif;
+}
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+body {
+  background: rgb(255, 255, 255);
+  /* background: rgb(242, 246, 255); */
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.navonFixed {
+  background: transparent !important;
+}
+.navonStikcy {
+  position: fixed !important;
+  top: 0vh !important;
+  left: 0 !important;
+  right: 0 !important;
+  min-height: 8vh !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(0.3rem) !important;
+  box-shadow: 0rem 0.05rem 0.05rem rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.ifRowReverse {
+  flex-direction: row-reverse !important;
+}
+.ifJustifyEnd {
+  justify-content: flex-start !important;
+  justify-items: start !important;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.d-flex-blox-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.d-flex-blox-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.d-grid {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
+.d-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.polygone_1 {
+  background-image: radial-gradient(
+    circle farthest-corner at 7.2% 13.6%,
+    rgba(37, 249, 245, 1) 0%,
+    rgba(8, 70, 218, 1) 90%
+  );
+}
+.polygone_2 {
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(243, 94, 131, 1) 17.1%,
+    rgba(236, 212, 80, 1) 89.7%
+  );
+}
+.polygone_3 {
+  background-image: linear-gradient(
+    89.4deg,
+    rgba(194, 0, 39, 1) 0.8%,
+    rgba(10, 35, 104, 1) 99.4%
+  );
+}
+.polygone_4{
+  background-image: linear-gradient( 10.7deg,  rgb(0, 255, 136) 2.2%, rgb(0, 64, 255) 100.5% );
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95vw;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /* .navonStikcy {
+    min-height: 7vh !important;
+  } */
+  .ifColumnReverse {
+    flex-direction: column !important;
+  }
+}

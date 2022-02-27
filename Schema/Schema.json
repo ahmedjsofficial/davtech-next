@@ -1,0 +1,54 @@
+{
+  "home": {
+    "hero": {
+      "title1": "Innovation",
+      "title2": "Creativity",
+      "title3": "Tech",
+      "button1": "Talk's to an Expert",
+      "button2": "Let's Get Started",
+      "description": "No 1 Trustworthy technology company in the world, we deliver the best products and services to our customers. Davuptech combines the best developer experience with an obsessive focus on end-user performance. Our platform enables peoples to do their best work."
+    },
+    "model": {
+      "title": "A Creative way to Grow your Exciting Buissnes Model",
+      "description": "We are always deliver to our customers new full end-to-end ideas for growing new Buissnes over the world. Peoples always believe on us. We have a set of rules when doing businesses, we have friendly prices for our strong customers and also sometimes we consider small start-up companies.",
+      "button": "Grow with us"
+    },
+    "dynamic": {
+      "title": "We're Dynamic Team of Creatives Peoples and Develop the Enterprise Bussiness",
+      "description": "The team stood out because of their swift response time and patience. Davuptech provided one contact person, which helped streamline project management and coordination. Not only did Davuptech follow the budget and timeline, the team even offered additional services at no extra charge.",
+      "button": "More Info"
+    },
+    "company": {
+      "title": "Great Companies are built on great Products",
+      "description": "No 1 Trustworthy technology company in the world, we deliver the best products and services to our customers.Davuptech is known for it's project development because our teams which is full of idea engineers bring more ideas to every incoming projects and our plan is to bring out a unique projects that will change the world and makes impact in the technology world.",
+      "button": "Hired US"
+    },
+    "ready": {
+      "title": "We're ready to Serve Our Best Innovations, Creativity and Technology",
+      "description": "We provide software services to startups & small business that is looking for partner for their digital media, design & dev lead generation & communication. Davuptech is the no 1 trustworthy company, all our products and services are reliable and we also develop to make our customers satisfied and happy.",
+      "button": "Estimate Your Project"
+    },
+    "whypeople": {
+      "maintitle": "WHY CHOOSE US",
+      "subTitle": "Your Comfort is Our Priority",
+      "choose": {
+        "performance": {
+          "title": "High Performance",
+          "description": "Our products and services comes with great quality and we have a great fast-paced workers that are eligible to produce great software in less time."
+        },
+        "maintenance": {
+          "title": "High Maintenance",
+          "description": "We have a set of rules when doing businesses, we have friendly prices for our strong customers and also sometimes we consider small start-up companies."
+        },
+        "reliable": {
+          "title": "Highly Reliable",
+          "description": "Davuptech is the no 1 trustworthy company, all our products and services are reliable and we also develop to make our customers satisfied and happy."
+        },
+        "secure": {
+          "title": "Fully Secured",
+          "description": "Davuptech is the no 1 trustworthy company, all our products and services are secured and we also develop to make our customers satisfied and happy."
+        }
+      }
+    }
+  }
+}

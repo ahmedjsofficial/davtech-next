@@ -4,8 +4,8 @@ import WhyPeople from "../Components/Home/WhyPeople";
 import Pricings from "../Components/Pricings";
 import Svgs from "../Components/Svgs";
 import Theme1 from "../Themes/Theme1";
-
-export default function index({ data }) {
+// https://www.smashingmagazine.com/2020/04/dark-mode-react-apps-styled-components/
+export default function Index({ data }) {
   const { home: { hero, model, dynamic, company, ready, whypeople, pricings } } = data;
   return (
     <>

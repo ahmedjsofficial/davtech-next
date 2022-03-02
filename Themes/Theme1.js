@@ -1,14 +1,16 @@
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import styled from "styled-components";
 
 export default function Theme1({title,description,button,themeImg, ifRowReverse,ifJustifyEnd}) {
+    const { resolvedTheme } = useTheme();
   return (
     <>
       <div className="container">
         <Wrap className={`${ifRowReverse && "ifRowReverse ifColumnReverse"}`}>
             <TextContent>
-                <h1>{title}</h1>
-                <p>{description}</p>
+                <h1 style={{ color: resolvedTheme === 'dark' ? "white" : "black" }}>{title}</h1>
+                <p style={{ color: resolvedTheme === 'dark' ? "rgba(249,249,249,0.8)" : "black" }}>{description}</p>
                 <button type="button" role={"link"}>{button}</button>
             </TextContent>
             <ImageContent className={`${ifJustifyEnd && "ifJustifyEnd"}`}><Image src={themeImg} alt="theme/image" priority decoding="async" objectFit="cover" /></ImageContent>
@@ -62,7 +64,6 @@ const TextContent = styled.div`
 
     h1 {
         font-size: 2rem;
-        color: #000;
         font-weight: 700;
         font-style: normal;
         line-height: 1.15;
@@ -78,7 +79,6 @@ const TextContent = styled.div`
         }
     }
     p {
-        color: rgba(0, 0, 0, 0.9);
         font-size: 1rem;
         font-weight: 500;
         text-align: justify;
@@ -98,7 +98,7 @@ const TextContent = styled.div`
         padding: 0.7rem 2rem;
         border-radius: 0.5rem;
         transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
-        color: var(--color-white);
+        color: #fff;
         background-color: #0070f3;
         border: 0.5px solid #0071f1;
         box-shadow: 0 4px 14px 0 rgb(0 118 255 / 29%);

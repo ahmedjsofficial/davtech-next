@@ -1,4 +1,9 @@
 {
+  "colors":{
+    "white": "#fff",
+    "black": "#000",
+    "whiteLight": "rgba(249,249,249,0.8)"
+  },
   "home": {
     "hero": {
       "title1": "Innovation",

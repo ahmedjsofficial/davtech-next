@@ -1,3 +1,4 @@
+import { useTheme } from "next-themes";
 import styled, { keyframes } from "styled-components";
 
 export default function Hero({
@@ -6,14 +7,15 @@ export default function Hero({
   title3,
   button1,
   button2,
-  description,
+  description
 }) {
+  const { resolvedTheme } = useTheme();
   return (
     <>
       <div className="container">
         <HeroContent className="d-flex-blox-column">
           <Titles className="d-grid">
-            <h1>
+            <h1 style={{ color: resolvedTheme === 'dark' ? "white" : "black" }}>
               {title1}
               <span>.</span>
             </h1>
@@ -30,7 +32,7 @@ export default function Hero({
             <button type="button">{button1}</button>
             <button type="button">{button2}</button>
           </ButtonGroup>
-          <HeroText>{description}</HeroText>
+          <HeroText style={{ color: resolvedTheme === 'dark' ? "white" : "#3c3c3c" }}>{description}</HeroText>
         </HeroContent>
       </div>
     </>
@@ -70,15 +72,10 @@ const HeroContent = styled.div`
   z-index: 1500;
   @media screen and (max-width: 1200px) {
     height: 75vh;
-    justify-content: flex-end;
-  }
-  @media screen and (max-width: 991px) {
-    height: 65vh;
   }
 `;
 const Titles = styled.div`
   h1 {
-    color: var(--color-black);
     font-size: 8rem;
     font-weight: 900;
     position: relative;
@@ -142,7 +139,7 @@ const Titles = styled.div`
 `;
 const ButtonGroup = styled.div`
   width: 29vw;
-  margin: 1.5vh 0;
+  margin: 1.5vh 0 2vh 0;
   @media screen and (max-width: 1200px) {
     width: 100%;
     justify-content: space-evenly;
@@ -159,7 +156,7 @@ const ButtonGroup = styled.div`
       padding: 0.6rem 1.5rem;
     }
     &:nth-child(1) {
-      color: var(--color-white);
+      color: #fff;
       background-color: #0070f3;
       border: 0.5px solid #0071f1;
       box-shadow: 0 4px 14px 0 rgb(0 118 255 / 29%);
@@ -188,9 +185,7 @@ const ButtonGroup = styled.div`
 const HeroText = styled.div`
   max-width: 650px;
   text-align: center;
-  font-weight: 500;
   font-size: 0.9rem;
-  color: #3c3c3c;
   text-shadow: rgb(0 0 0 / 15%) 0px 10px 40px;
 
   @media screen and (max-width: 767px) {

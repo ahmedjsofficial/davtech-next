@@ -12,6 +12,21 @@ import brand13 from "../public/Images/Icons/Brands/brand (13).png";
 import brand14 from "../public/Images/Icons/Brands/brand (14).png";
 
 
+export const TBrandsAPI = [
+    { brandSvg: brand1 },
+    { brandSvg: brand2 },
+    { brandSvg: brand3 },
+    { brandSvg: brand5 },
+    { brandSvg: brand6 },
+    { brandSvg: brand8 },
+    { brandSvg: brand9 },
+    { brandSvg: brand10 },
+    { brandSvg: brand11 },
+    { brandSvg: brand12 },
+    { brandSvg: brand13 },
+    { brandSvg: brand14 }
+  ];
+
 const Svgs = {
     blackLogo: require('../public/Images/black-logo.png'),
     creativeSvg: require('../public/Images/SVGs/creative_model.svg'),
@@ -31,19 +46,3 @@ const Svgs = {
 }
 
 export default Svgs;
-
-
-export const TBrandsAPI = [
-    { brandSvg: brand1 },
-    { brandSvg: brand2 },
-    { brandSvg: brand3 },
-    { brandSvg: brand5 },
-    { brandSvg: brand6 },
-    { brandSvg: brand8 },
-    { brandSvg: brand9 },
-    { brandSvg: brand10 },
-    { brandSvg: brand11 },
-    { brandSvg: brand12 },
-    { brandSvg: brand13 },
-    { brandSvg: brand14 }
-  ];

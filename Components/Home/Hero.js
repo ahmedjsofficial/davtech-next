@@ -1,4 +1,3 @@
-import { useTheme } from "next-themes";
 import styled, { keyframes } from "styled-components";
 
 export default function Hero({
@@ -9,13 +8,13 @@ export default function Hero({
   button2,
   description
 }) {
-  const { resolvedTheme } = useTheme();
+
   return (
     <>
       <div className="container">
         <HeroContent className="d-flex-blox-column">
           <Titles className="d-grid">
-            <h1 style={{ color: resolvedTheme === 'dark' ? "white" : "black" }}>
+            <h1>
               {title1}
               <span>.</span>
             </h1>
@@ -32,7 +31,7 @@ export default function Hero({
             <button type="button">{button1}</button>
             <button type="button">{button2}</button>
           </ButtonGroup>
-          <HeroText style={{ color: resolvedTheme === 'dark' ? "white" : "#3c3c3c" }}>{description}</HeroText>
+          <HeroText>{description}</HeroText>
         </HeroContent>
       </div>
     </>

@@ -1,18 +1,9 @@
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import styled from "styled-components";
 import Svgs from "./Svgs";
 import TrustBrands from "./TrustBrands";
 
 export default function Footer() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), [])
-
-  if (!mounted) return null
   return (
     <>
       <TrustBrands />
@@ -126,13 +117,11 @@ export default function Footer() {
             </li>
           </div>
           <div className="d-flex">
-            {theme !== undefined && (
-              <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-                <option value="dark">Dark</option>
-                <option value="light">Light</option>
-                <option value="system">System</option>
-              </select>
-            )}
+            <select>
+              <option value="dark">Dark</option>
+              <option value="light">Light</option>
+              <option value="system">System</option>
+            </select>
           </div>
         </FooterBottom>
       </DavFooter>

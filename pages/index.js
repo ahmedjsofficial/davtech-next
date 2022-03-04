@@ -3,10 +3,12 @@ import Hero from "../Components/Home/Hero";
 import WhyPeople from "../Components/Home/WhyPeople";
 import Pricings from "../Components/Pricings";
 import Svgs from "../Components/Svgs";
-import Theme1 from "../Themes/Theme1";
-// https://www.smashingmagazine.com/2020/04/dark-mode-react-apps-styled-components/
+import ContentTheme from "../Themes/ContentTheme.js";
+
 export default function Index({ data }) {
-  const { home: { hero, model, dynamic, company, ready, whypeople, pricings } } = data;
+  const {
+    home: { hero, model, dynamic, company, ready, whypeople, pricings },
+  } = data;
   return (
     <>
       <Head>
@@ -16,7 +18,7 @@ export default function Index({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
-        <Hero 
+        <Hero
           title1={hero?.title1}
           title2={hero?.title2}
           title3={hero?.title3}
@@ -24,14 +26,14 @@ export default function Index({ data }) {
           button2={hero?.button2}
           description={hero?.description}
         />
-        
-        <Theme1 
+
+        <ContentTheme
           title={model?.title}
           description={model?.description}
           button={model?.button}
           themeImg={Svgs.creativeSvg}
         />
-        <Theme1 
+        <ContentTheme
           title={company?.title}
           description={company?.description}
           button={company?.button}
@@ -40,18 +42,18 @@ export default function Index({ data }) {
           ifJustifyEnd
           ifColumnReverse
         />
-        <WhyPeople 
+        <WhyPeople
           maintitle={whypeople?.maintitle}
           subTitle={whypeople?.subTitle}
           choose={whypeople?.choose}
         />
-        <Theme1 
+        <ContentTheme
           title={dynamic?.title}
           description={dynamic?.description}
           button={dynamic?.button}
           themeImg={Svgs.dynamicSvg}
         />
-        <Theme1 
+        <ContentTheme
           title={ready?.title}
           description={ready?.description}
           button={ready?.button}
@@ -60,7 +62,7 @@ export default function Index({ data }) {
           ifJustifyEnd
           ifColumnReverse
         />
-        <Pricings 
+        <Pricings
           title={pricings?.title}
           subTitle={pricings?.subtitle}
           plans={pricings?.plans}
@@ -68,16 +70,16 @@ export default function Index({ data }) {
       </section>
     </>
   );
-};
+}
 
-export async function getServerSideProps () {
+export async function getServerSideProps() {
   const URL = `http://localhost:3000/api/davapi`;
   const req = await fetch(URL);
   const data = await req.json();
 
   return {
     props: {
-      data
-    }
-  }
+      data,
+    },
+  };
 }
